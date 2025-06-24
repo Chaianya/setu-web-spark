@@ -124,6 +124,15 @@ export default {
 					'25%': { transform: 'translateX(-5px) rotate(-1deg)' },
 					'75%': { transform: 'translateX(5px) rotate(1deg)' }
 				},
+				'rubberBand': {
+					'0%': { transform: 'scale3d(1, 1, 1)' },
+					'30%': { transform: 'scale3d(1.25, 0.75, 1)' },
+					'40%': { transform: 'scale3d(0.75, 1.25, 1)' },
+					'50%': { transform: 'scale3d(1.15, 0.85, 1)' },
+					'65%': { transform: 'scale3d(0.95, 1.05, 1)' },
+					'75%': { transform: 'scale3d(1.05, 0.95, 1)' },
+					'100%': { transform: 'scale3d(1, 1, 1)' }
+				},
 				'drift': {
 					'0%, 100%': { transform: 'translateX(0px) translateY(0px)' },
 					'33%': { transform: 'translateX(30px) translateY(-30px)' },
@@ -136,6 +145,30 @@ export default {
 				'glow': {
 					'0%, 100%': { boxShadow: '0 0 20px rgba(0,0,0,0.1)' },
 					'50%': { boxShadow: '0 0 40px rgba(0,0,0,0.2)' }
+				},
+				'morphScale': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.1)' }
+				},
+				'slideUpFade': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(50px) scale(0.9)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0) scale(1)'
+					}
+				},
+				'shimmer': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' }
+				},
+				'bounce': {
+					'0%, 20%, 53%, 80%, 100%': { transform: 'translate3d(0,0,0)' },
+					'40%, 43%': { transform: 'translate3d(0, -30px, 0)' },
+					'70%': { transform: 'translate3d(0, -15px, 0)' },
+					'90%': { transform: 'translate3d(0, -4px, 0)' }
 				}
 			},
 			animation: {
@@ -145,9 +178,14 @@ export default {
 				'fadeInUp': 'fadeInUp 0.6s ease-out forwards',
 				'slideInLeft': 'slideInLeft 0.8s ease-out forwards',
 				'shake': 'shake 0.5s ease-in-out',
+				'rubberBand': 'rubberBand 0.8s ease-in-out',
 				'drift': 'drift 20s ease-in-out infinite',
 				'float': 'float 6s ease-in-out infinite',
-				'glow': 'glow 4s ease-in-out infinite'
+				'glow': 'glow 4s ease-in-out infinite',
+				'morphScale': 'morphScale 2s ease-in-out infinite',
+				'slideUpFade': 'slideUpFade 0.6s ease-out forwards',
+				'shimmer': 'shimmer 2s ease-in-out infinite',
+				'bounce': 'bounce 2s infinite'
 			}
 		}
 	},
